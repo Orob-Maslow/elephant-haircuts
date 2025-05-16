@@ -7,16 +7,20 @@ from adafruit_hid.keycode import Keycode
 
 keyboard = Keyboard(usb_hid.devices)
 
+# RIGHT SIDE 2 upper pins
 esc_pin = board.GP17  # pin to connect button to
-space_pin = board.GP16
+enter_pin = board.GP16
+# right side arrow keys
 up_pin = board.GP18
 left_pin = board.GP19
 right_pin = board.GP21
 down_pin = board.GP20
-view_pin = board.GP22
-ride_on_pin = board.GP28
-enter_pin = board.GP27
-screen_capture_pin = board.GP26
+
+# Left side from top to bottom
+space_pin = board.GP22
+ride_on_pin = board.GP26
+view_pin = board.GP27
+screen_capture_pin = board.GP28
 
 # Initializing Button
 esc = digitalio.DigitalInOut(esc_pin)
