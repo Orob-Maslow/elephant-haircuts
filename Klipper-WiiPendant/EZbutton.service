@@ -1,0 +1,14 @@
+[Unit] 
+Description=EZ Pendant daemon 
+
+[Service] 
+Type=simple 
+ExecStart=/usr/bin/python3 /home/pi/wp/EZbutton.py 
+WorkingDirectory=/home/pi/wp
+StandardOutput=tty 
+TTY Path=/dev/tty1
+Restart=never 
+user=pi 
+
+[Install]
+WantedBy=sysinit.target

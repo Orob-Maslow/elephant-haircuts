@@ -1,0 +1,15 @@
+[Unit] 
+Description=EZ LED daemon 
+After=network.target
+
+[Service] 
+StandardOutput=tty
+TTYPath=/dev/tty1
+Type=forking 
+ExecStart=/home/pi/wp/EZled.sh 
+WorkingDirectory=/home/pi/wp
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=sysinit.target

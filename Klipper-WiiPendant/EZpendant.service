@@ -1,0 +1,15 @@
+[Unit] 
+Description=EZ Pendant daemon 
+After=network.target
+
+[Service] 
+Type=forking 
+ExecStart=/home/pi/wp/EZpendant.sh 
+WorkingDirectory=/home/pi/wp/ 
+StandardOutput=/home/pi/wp/EZP.log
+StandardError=/home/pi/wp/EZPerr.log
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=sysinit.target
